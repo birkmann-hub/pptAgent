@@ -1,0 +1,46 @@
+name: agenda
+display_name: Agenda / Table of Contents
+description: >
+  Shows the structure and flow of the presentation so the audience knows
+  what to expect. Each item corresponds to a major section.
+layout: content
+usage: >
+  Typically the second slide. Can also be used as a recurring section
+  divider with the active section highlighted.
+elements:
+  - id: title
+    type: text
+    role: slide_title
+    placeholder: "Agenda"
+    font_size: 28
+    bold: true
+    color: dark_blue
+  - id: agenda_items
+    type: list
+    role: main_content
+    placeholder:
+      - "01 | Context & Background"
+      - "02 | Problem Statement"
+      - "03 | Methodology"
+      - "04 | Key Findings"
+      - "05 | Recommendations"
+      - "06 | Next Steps"
+    item_font_size: 18
+    numbered: true
+    color: dark_text
+  - id: duration_note
+    type: text
+    role: footer_note
+    placeholder: "Total duration: 90 min"
+    font_size: 11
+    bold: false
+    color: gray
+required_content:
+  - agenda_items
+  - total_duration
+ai_prompt_hint: >
+  Create a logical agenda for a consulting workshop/meeting of the given
+  duration. Each agenda item should be a concise section title that covers
+  the topic from context-setting to actionable recommendations.
+  Adapt the number of items to the available time (allow roughly 10-15 min
+  per major section).

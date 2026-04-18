@@ -1,0 +1,50 @@
+name: problem_statement
+display_name: Problem Statement
+description: >
+  Clearly articulates the core challenge or opportunity the project
+  addresses. Uses a problem-tree or hypothesis structure.
+layout: content
+usage: >
+  After the context slide. Defines the burning question the rest of the
+  presentation will answer.
+elements:
+  - id: title
+    type: text
+    role: slide_title
+    placeholder: "Problem Statement"
+    font_size: 28
+    bold: true
+    color: dark_blue
+  - id: core_question
+    type: text
+    role: highlight_box
+    placeholder: "How can [company] achieve [goal] despite [challenge]?"
+    font_size: 18
+    bold: true
+    color: white
+    background: accent_orange
+  - id: problem_drivers
+    type: list
+    role: main_content
+    placeholder:
+      - "Driver 1: Root cause or contributing factor"
+      - "Driver 2: Root cause or contributing factor"
+      - "Driver 3: Root cause or contributing factor"
+    item_font_size: 15
+    numbered: false
+    color: dark_text
+  - id: impact_statement
+    type: text
+    role: supporting_text
+    placeholder: "If left unaddressed, this leads to: [consequence]"
+    font_size: 14
+    bold: false
+    color: gray
+required_content:
+  - core_question
+  - problem_drivers
+  - impact
+ai_prompt_hint: >
+  Formulate the central problem as a clear "how might we" or "to what
+  extent" question. Identify 3-4 root causes or key drivers. State the
+  business impact if the problem is not solved.
