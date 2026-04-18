@@ -1,0 +1,38 @@
+name: section_divider
+display_name: Section Divider
+description: >
+  A visual separator between major sections of the presentation.
+  Uses a prominent section title and number against a dark background.
+layout: section
+usage: >
+  At the start of each major section. Helps the audience orientate
+  themselves and marks transitions in the narrative flow.
+elements:
+  - id: section_number
+    type: text
+    role: section_number
+    placeholder: "01"
+    font_size: 72
+    bold: true
+    color: accent_orange
+  - id: section_title
+    type: text
+    role: main_title
+    placeholder: "Section Title"
+    font_size: 36
+    bold: true
+    color: white
+  - id: section_description
+    type: text
+    role: subtitle
+    placeholder: "Brief description of what this section covers"
+    font_size: 16
+    bold: false
+    color: light_blue
+required_content:
+  - section_number
+  - section_title
+ai_prompt_hint: >
+  Generate a section title and a one-sentence description. The title should
+  be concise (2-4 words). The description should tell the audience what
+  question this section will answer.

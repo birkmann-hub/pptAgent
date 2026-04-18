@@ -1,0 +1,43 @@
+name: closing
+display_name: Closing / Thank You
+description: >
+  The final slide of the presentation. Thanks the audience, restates the
+  main call to action and provides contact information.
+layout: title
+usage: >
+  Always the last slide. Used exactly once per presentation.
+elements:
+  - id: main_text
+    type: text
+    role: main_title
+    placeholder: "Thank You"
+    font_size: 48
+    bold: true
+    color: white
+  - id: tagline
+    type: text
+    role: subtitle
+    placeholder: "We look forward to your questions and next steps."
+    font_size: 18
+    bold: false
+    color: light_blue
+  - id: contact_name
+    type: text
+    role: contact
+    placeholder: "Your Name | your.email@company.com"
+    font_size: 14
+    bold: false
+    color: white
+  - id: company_name
+    type: text
+    role: company
+    placeholder: "Company Name | www.company.com"
+    font_size: 12
+    bold: false
+    color: light_gray
+required_content:
+  - presenter_name
+  - contact_email
+ai_prompt_hint: >
+  Write a warm, professional closing message. Include a brief call-to-
+  action sentence that ties back to the next steps slide.

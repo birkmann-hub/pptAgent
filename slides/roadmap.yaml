@@ -1,0 +1,63 @@
+name: roadmap
+display_name: Roadmap / Implementation Timeline
+description: >
+  Visual timeline that shows when recommendations or project milestones
+  will be executed. Uses a Gantt-style or swim-lane layout.
+layout: timeline
+usage: >
+  After recommendations. Shows feasibility and sequencing of actions.
+  Especially important for transformation or implementation projects.
+elements:
+  - id: title
+    type: text
+    role: slide_title
+    placeholder: "Implementation Roadmap"
+    font_size: 28
+    bold: true
+    color: dark_blue
+  - id: timeline_header
+    type: timeline_columns
+    role: header
+    placeholder:
+      - "Q1 2025"
+      - "Q2 2025"
+      - "Q3 2025"
+      - "Q4 2025"
+    font_size: 12
+    bold: true
+    color: white
+    background: dark_blue
+  - id: swim_lanes
+    type: timeline_rows
+    role: main_content
+    placeholder:
+      - workstream: "Workstream 1"
+        bars:
+          - start: 1
+            span: 2
+            label: "Initiative A"
+      - workstream: "Workstream 2"
+        bars:
+          - start: 2
+            span: 3
+            label: "Initiative B"
+      - workstream: "Workstream 3"
+        bars:
+          - start: 3
+            span: 2
+            label: "Initiative C"
+    font_size: 13
+  - id: milestone_note
+    type: text
+    role: footnote
+    placeholder: "▲ Milestone  ★ Decision Point"
+    font_size: 11
+    color: gray
+required_content:
+  - workstreams
+  - timeline_columns
+ai_prompt_hint: >
+  Create a realistic implementation roadmap with 2-4 workstreams and
+  specific initiatives within each. Set appropriate start and duration for
+  each bar based on typical project timelines in the given sector and
+  project type. Milestone dates should reflect urgency.

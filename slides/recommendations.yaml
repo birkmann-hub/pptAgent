@@ -1,0 +1,50 @@
+name: recommendations
+display_name: Recommendations
+description: >
+  Presents specific, actionable recommendations derived from the findings.
+  Each recommendation is prioritised and linked back to the problem.
+layout: content
+usage: >
+  The "answer" section of the presentation. Follows the findings.
+  Can be split into multiple slides (e.g. short-term vs. long-term actions).
+elements:
+  - id: title
+    type: text
+    role: slide_title
+    placeholder: "Our Recommendations"
+    font_size: 28
+    bold: true
+    color: dark_blue
+  - id: recommendations
+    type: recommendation_cards
+    role: main_content
+    placeholder:
+      - priority: "01"
+        heading: "Recommendation 1"
+        description: "Short description of the action"
+        impact: "High"
+        effort: "Medium"
+      - priority: "02"
+        heading: "Recommendation 2"
+        description: "Short description of the action"
+        impact: "High"
+        effort: "Low"
+      - priority: "03"
+        heading: "Recommendation 3"
+        description: "Short description of the action"
+        impact: "Medium"
+        effort: "Low"
+    font_size: 13
+  - id: rationale_note
+    type: text
+    role: footnote
+    placeholder: "Prioritisation based on impact/effort analysis"
+    font_size: 11
+    color: gray
+required_content:
+  - recommendations
+ai_prompt_hint: >
+  Formulate 3-5 concrete, actionable recommendations. Each recommendation
+  should start with a strong action verb. Classify each by impact (High/
+  Medium/Low) and effort (High/Medium/Low). Tie each recommendation back
+  to a specific finding.

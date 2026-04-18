@@ -1,0 +1,44 @@
+name: executive_summary
+display_name: Executive Summary
+description: >
+  A concise, high-level overview of the most important messages, findings
+  and recommendations. Designed for decision-makers who may only see this
+  one slide.
+layout: content
+usage: >
+  Placed early in the presentation (after agenda). Summarises the entire
+  deck in 3-5 crisp bullet points or "so what" statements.
+elements:
+  - id: title
+    type: text
+    role: slide_title
+    placeholder: "Executive Summary"
+    font_size: 28
+    bold: true
+    color: dark_blue
+  - id: key_messages
+    type: list
+    role: main_content
+    placeholder:
+      - "Key message / finding 1"
+      - "Key message / finding 2"
+      - "Key message / finding 3"
+    item_font_size: 16
+    numbered: false
+    color: dark_text
+    max_items: 5
+  - id: bottom_line
+    type: text
+    role: highlight_box
+    placeholder: "Bottom line: Clear, one-sentence conclusion"
+    font_size: 16
+    bold: true
+    color: white
+    background: dark_blue
+required_content:
+  - key_messages
+  - bottom_line
+ai_prompt_hint: >
+  Summarise the presentation in 3-5 crisp bullet points. Each bullet should
+  convey one key message or finding. End with a single bold "bottom line"
+  sentence that captures the most critical takeaway for the target group.

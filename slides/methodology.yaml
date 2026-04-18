@@ -1,0 +1,50 @@
+name: methodology
+display_name: Methodology / Approach
+description: >
+  Describes how the project, analysis or workshop was conducted.
+  Builds credibility and trust with the audience by showing the
+  structured approach used.
+layout: process
+usage: >
+  After the problem statement. Especially important for analytical or
+  strategy projects. Can be condensed or omitted for short workshops.
+elements:
+  - id: title
+    type: text
+    role: slide_title
+    placeholder: "Our Approach"
+    font_size: 28
+    bold: true
+    color: dark_blue
+  - id: phases
+    type: process_steps
+    role: main_content
+    placeholder:
+      - label: "Phase 1"
+        heading: "Discovery"
+        description: "Stakeholder interviews, data collection"
+      - label: "Phase 2"
+        heading: "Analysis"
+        description: "Data analysis, benchmarking"
+      - label: "Phase 3"
+        heading: "Synthesis"
+        description: "Insight generation, hypothesis testing"
+      - label: "Phase 4"
+        heading: "Recommendations"
+        description: "Solution design, business case"
+    font_size: 13
+    color: white
+    background: dark_blue
+  - id: timeline_note
+    type: text
+    role: footnote
+    placeholder: "Project duration: X weeks | Current phase: highlighted"
+    font_size: 11
+    color: gray
+required_content:
+  - phases
+ai_prompt_hint: >
+  Describe the consulting methodology adapted to the project type and
+  sector. Break it down into 3-5 logical phases. Each phase needs a short
+  label, a heading (one noun) and a 1-2 line description of the key
+  activities.

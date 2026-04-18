@@ -1,0 +1,58 @@
+name: findings
+display_name: Key Findings / Analysis
+description: >
+  Presents the main analytical results, data insights or research findings.
+  Follows a "Situation–Complication–Resolution" (SCR) structure or a
+  pyramid-principle layout.
+layout: two_column
+usage: >
+  Core section of the presentation. May span multiple slides; one slide
+  per major finding is recommended.
+elements:
+  - id: title
+    type: text
+    role: slide_title
+    placeholder: "Key Findings"
+    font_size: 28
+    bold: true
+    color: dark_blue
+  - id: section_label
+    type: text
+    role: section_tag
+    placeholder: "Finding 01"
+    font_size: 13
+    bold: true
+    color: white
+    background: accent_orange
+  - id: finding_headline
+    type: text
+    role: main_message
+    placeholder: "One-sentence headline capturing the main insight"
+    font_size: 20
+    bold: true
+    color: dark_blue
+    column: left
+  - id: supporting_points
+    type: list
+    role: supporting_content
+    placeholder:
+      - "Supporting data point or evidence 1"
+      - "Supporting data point or evidence 2"
+      - "Supporting data point or evidence 3"
+    item_font_size: 14
+    column: left
+    color: dark_text
+  - id: visual_placeholder
+    type: chart_placeholder
+    role: data_visual
+    placeholder: "Chart / Data Visual / Exhibit"
+    column: right
+    color: light_gray
+required_content:
+  - finding_headline
+  - supporting_points
+ai_prompt_hint: >
+  State each key finding as a declarative, insight-driven headline
+  (avoid "we analysed X" – instead write "X is the primary driver of Y").
+  Provide 2-4 supporting bullet points with data or evidence. Suggest an
+  appropriate chart type for the right column.

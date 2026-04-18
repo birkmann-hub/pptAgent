@@ -1,0 +1,46 @@
+name: cover
+display_name: Cover / Title Slide
+description: >
+  The opening slide of the presentation. Sets the stage by presenting the
+  topic, client or project name, presenter details and date.
+layout: title
+usage: >
+  Always the first slide. Use exactly once per presentation.
+elements:
+  - id: title
+    type: text
+    role: main_title
+    placeholder: "Presentation Title"
+    font_size: 36
+    bold: true
+    color: white
+  - id: subtitle
+    type: text
+    role: subtitle
+    placeholder: "Project Name | Client Name"
+    font_size: 20
+    bold: false
+    color: light_blue
+  - id: context_line
+    type: text
+    role: meta
+    placeholder: "Sector | Project Type | Date"
+    font_size: 14
+    bold: false
+    color: white
+  - id: presenter
+    type: text
+    role: meta
+    placeholder: "Presenter Name, Role"
+    font_size: 14
+    bold: false
+    color: white
+required_content:
+  - title
+  - subtitle
+  - date
+  - presenter_name
+ai_prompt_hint: >
+  Generate a compelling, professional title for a consulting presentation.
+  The title should reflect the topic, be concise (max 10 words) and suitable
+  for the specified target group and sector.
